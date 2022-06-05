@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.kordamp.bootstrapfx.scene.layout.Panel?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.CheckBox?>
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<Panel fx:id="background" maxWidth="Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml"
+       fx:controller="davethms83.mediacenter.SettingsController">
+    <TabPane fx:id="tabs" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="accountTab" text="Account">
+                <BorderPane>
+                    <center>
+                        <ScrollPane fx:id="accountScroll" stylesheets="@../../CSS/Style.css">
+                            <BorderPane fx:id="account" maxHeight="Infinity" maxWidth="Infinity" opacity="Infinity">
+                                <center>
+                                    <VBox spacing="20">
+                                        <HBox fx:id="profilePic" spacing="20">
+                                            <ImageView fx:id="profilePicImage"/>
+                                            <HBox fx:id="profilePicText" spacing="0">
+                                                <TextField fx:id="profilePicPath"/>
+                                                <Button fx:id="profilePicSelectPathButton"/>
+                                            </HBox>
+                                        </HBox>
+                                        <HBox spacing="250">
+                                            <VBox spacing="120">
+                                                <Label fx:id="userName" text="Username"/>
+                                                <Label fx:id="newPassword" text="New Password"/>
+                                                <Label fx:id="confirmNewPassword" text="Confirm Password"/>
+                                                <Label fx:id="requirePassword" text="Require Password"/>
+                                            </VBox>
+                                            <VBox spacing="120">
+                                                <TextField fx:id="userNameField"/>
+                                                <TextField fx:id="newPasswordField"/>
+                                                <TextField fx:id="confirmNewPasswordField"/>
+                                                <CheckBox fx:id="isRequiredPasswordCheckbox"/>
+                                            </VBox>
+                                        </HBox>
+                                        <HBox fx:id="applyCancelButtons">
+                                            <Button fx:id="applyButton" text="Apply"/>
+                                            <Button fx:id="cancelButton" text="Cancel"/>
+                                        </HBox>
+                                    </VBox>
+                                </center>
+                            </BorderPane>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+            </Tab>
+        </tabs>
+    </TabPane>
+</Panel>
+
